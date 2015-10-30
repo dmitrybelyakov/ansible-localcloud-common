@@ -1,2 +1,6 @@
 ---
-debig: msg='me is a playbook'
+- name: update apt
+  apt: update_cache=yes
+
+- include: software.yml
+- include: security.yml
