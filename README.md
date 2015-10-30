@@ -43,7 +43,7 @@ This role has no dependencies.
 Example Playbook
 ----------------
 
-```
+```yml
     - hosts: servers
       roles:
          - { role: username.rolename, x: 42 }
