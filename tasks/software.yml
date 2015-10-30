@@ -1,38 +1,13 @@
 ---
-- name: create group for a user
-  group: name={{item}} state=present
+- name: install software
+  apt: pkg={{item}} state=installed
   with_items:
-    - www-data
-    - '{{box_user}}'
+    - mc
+    - ntp
+    - git
+    - curl
+  notify:
+    - restart ntp
 
-- name: create user
-  user:
-    name={{box_user}}
-    shell=/bin/bash
-    groups='{{box_user}},www-data'
-
-
-- name: inject user ssh key
-  authorized_key:
-    user={{box_user}}
-    key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-  when: inject_user_ssh_key
-
-- name: inject additional ssh keys
-  authorized_key:
-    user={{box_user}}
-    key={{item}}
-  with_items: '{{inject_additional_ssh_keys}}'
-
-- name: disallow password logins
-  notify: restart ssh
-  lineinfile:
-    dest=/etc/ssh/sshd_config
-    state=present
-    regexp="^\s*PasswordAuthentication" line="PasswordAuthentication no"
-
-
-- name: enable paswordless sudo
-  copy:
-    dest=/etc/sudoers.d/{{box_user}}
-    content="{{box_user}} ALL=(ALL) NOPASSWD:ALL"
+- name: install ncurses
+  apt: pkg=ncurses-dev state=installed
