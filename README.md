@@ -1,9 +1,8 @@
 localcloud-common
 =========
-
-This role will install default set of software on a fresh box, create remote user of your choice and add it to
-`www-data` group enabling passwordless sudo, inject your ssh key in with configurable set of additional keys to inject,
-then disable password logins for security.
+This role is designed to init fresh boxes wit ha minimal set of software. It will sync box clock, install default set
+of software on a fresh box, create remote user of your choice and add it to `www-data` group enabling passwordless sudo,
+inject your ssh key in with configurable set of additional keys to inject, then disable password logins for security.
 
 Requirements
 ------------
