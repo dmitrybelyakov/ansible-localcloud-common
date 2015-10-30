@@ -44,9 +44,9 @@ Example Playbook
 ----------------
 
 ```yml
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+- hosts: servers
+  roles:
+     - { role: username.rolename, x: 42 }
 
 ```
 
