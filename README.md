@@ -52,6 +52,6 @@ Example Playbook
 License
 -------
 
-MIT
+MIT License
 
 
