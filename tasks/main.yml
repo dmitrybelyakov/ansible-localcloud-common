@@ -3,4 +3,8 @@
   apt: update_cache=yes
 
 - include: software.yml
+
 - include: security.yml
+  tags:
+    - security
+    - ssh

@@ -19,11 +19,11 @@
     key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
   when: inject_user_ssh_key
 
+
 - name: inject additional ssh keys
-  authorized_key:
-    user={{box_user}}
-    key={{item}}
-  with_items: '{{inject_additional_ssh_keys}}'
+  authorized_key: user={{box_user}} key='{{item}}'
+  with_file: '{{inject_additional_ssh_keys}}'
+
 
 - name: disallow password logins
   notify: restart ssh
