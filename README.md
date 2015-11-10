@@ -7,8 +7,7 @@ inject your ssh key in with configurable set of additional keys to inject, then 
 Requirements
 ------------
 
-A fresh Ubuntu 14 LTS box. This role in turn is a dependency of other `localcloud-*` roles and thus should be included
-first in your playbooks.
+A fresh Ubuntu 14 LTS box. 
 
 Role Variables
 --------------
