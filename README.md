@@ -46,6 +46,8 @@ Example Playbook
 - hosts: servers
   roles:
      - localcloud-common
+  vars:
+    box_user: username
 
 ```
 
