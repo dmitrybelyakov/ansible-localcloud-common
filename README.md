@@ -7,7 +7,7 @@ inject your ssh key in with configurable set of additional keys to inject, then 
 Requirements
 ------------
 
-A fresh Ubuntu 14 LTS box. 
+A fresh Ubuntu 14 LTS box.
 
 Role Variables
 --------------
