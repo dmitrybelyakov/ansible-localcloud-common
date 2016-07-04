@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Dmitry Belyakov
-  description: This role will install default set of software on a fresh box, create remote user of your choice and add it to www-data group enabling passwordless sudo, inject your ssh key in with configurable set of additional keys to inject, then disable password logins for security.
+  description: Configure basoc software and set up security and remote access.
   license: MIT
   min_ansible_version: 1.2
   platforms:
