@@ -8,9 +8,9 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - trusty
-  categories:
+  galaxy_tags:
   - development
   - networking
   - system
   - web
-  
+  dependencies: []  
