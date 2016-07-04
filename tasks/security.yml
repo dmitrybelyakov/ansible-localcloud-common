@@ -10,6 +10,7 @@
     name={{box_user}}
     shell=/bin/bash
     groups='{{box_user}},www-data'
+    append=True
     # if exists/ignore errors
 
 
