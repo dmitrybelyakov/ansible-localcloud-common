@@ -1,5 +1,5 @@
 ---
 # defaults file for localcloud-common
 home_directory: '/home/{{box_user}}'
-inject_user_ssh_key: True
+inject_user_ssh_key: False
 inject_additional_ssh_keys: []

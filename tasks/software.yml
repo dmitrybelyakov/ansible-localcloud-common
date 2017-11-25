@@ -6,6 +6,8 @@
     - ntp
     - git
     - curl
+    - ncdu
+    - htop
   notify:
     - restart ntp
 
