@@ -2,9 +2,9 @@
 - name: update apt
   apt: update_cache=yes
 
-- include: software.yml
+- include_tasks: software.yml
 
-- include: security.yml
+- include_tasks: security.yml
   tags:
     - security
     - ssh
