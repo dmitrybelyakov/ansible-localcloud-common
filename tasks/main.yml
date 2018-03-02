@@ -2,6 +2,10 @@
 - name: update apt
   apt: update_cache=yes
 
+- name: utf8 please
+  become: yes
+  command: update-locale LC_ALL=en_US.UTF-8
+
 - include_tasks: software.yml
 
 - include_tasks: security.yml
