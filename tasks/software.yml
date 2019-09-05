@@ -1,15 +1,15 @@
 ---
 - name: install software
-  apt: pkg={{item}} state=installed
-  with_items:
-    - mc
-    - ntp
-    - git
-    - curl
-    - ncdu
-    - htop
+  apt:
+    state: present
+    pkg: [
+      'mc',
+      'ntp',
+      'git',
+      'curl',
+      'ncdu',
+      'htop',
+      'ncurses-dev'
+    ]
   notify:
     - restart ntp
-
-- name: install ncurses
-  apt: pkg=ncurses-dev state=installed
